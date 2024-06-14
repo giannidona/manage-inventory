@@ -12,7 +12,7 @@ export const ItemCard = ({ item }: Props) => {
   const { id, itemName, itemImage, stock, price, createdAt } = item;
 
   return (
-    <div className="mb-12">
+    <div className="mb-2">
       <div className="flex h-[65px] w-[750px] items-center justify-between rounded bg-white p-2 text-black">
         <div>
           <Image
@@ -24,6 +24,7 @@ export const ItemCard = ({ item }: Props) => {
           />
         </div>
         <div className="flex gap-x-14">
+          <p>{itemName}</p>
           <p>${price}</p>
           <p>{stock}</p>
           <p>{createdAt.toDateString()}</p>
