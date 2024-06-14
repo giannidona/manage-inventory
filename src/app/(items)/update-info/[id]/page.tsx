@@ -110,7 +110,7 @@ export default function UpdateItemPage() {
           className="w-full rounded border border-black bg-white px-3 py-1 font-bold text-black transition-all duration-300 ease-in-out hover:border-white hover:bg-black hover:text-white"
           type="submit"
         >
-          Create Item
+          Update Item
         </button>
       </form>
     </div>
