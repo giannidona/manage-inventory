@@ -8,3 +8,11 @@ export interface CreateItemInput {
   stock: number;
   price: number;
 }
+
+export interface UpdateItemInput {
+  id: string;
+  itemName?: string;
+  itemImage?: string;
+  stock?: number;
+  price?: number;
+}
