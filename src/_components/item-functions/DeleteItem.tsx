@@ -1,7 +1,6 @@
 "use client";
 
 import { deleteItemById } from "@/actions";
-import prisma from "@/lib/prisma";
 import { Trash2 } from "lucide-react";
 
 interface DeleteItemProps {

@@ -2,7 +2,6 @@ import Image from "next/image";
 import { Item } from "@/types";
 import { DeleteItem } from "./item-functions/DeleteItem";
 import { UpdateItem } from "./item-functions/UpdateItem";
-import { ItemInfo } from "./item-functions/ItemInfo";
 
 interface Props {
   item: Item;
@@ -23,15 +22,22 @@ export const ItemCard = ({ item }: Props) => {
             width={50}
           />
         </div>
-        <div className="flex gap-x-14">
-          <p>{itemName}</p>
-          <p>${price}</p>
-          <p>{stock}</p>
-          <p>{createdAt.toDateString()}</p>
+        <div className="flex gap-x-5 text-center">
+          <div className="w-[100px]">
+            <p>{itemName}</p>
+          </div>
+          <div className="w-[100px]">
+            <p>${price}</p>
+          </div>
+          <div className="w-[100px]">
+            <p>{stock}</p>
+          </div>
+          <div className="w-[150px]">
+            <p>{createdAt.toDateString()}</p>
+          </div>
         </div>
         <div className="flex gap-x-2 text-white">
-          <ItemInfo />
-          <UpdateItem />
+          <UpdateItem id={id} />
           <DeleteItem id={id} />
         </div>
       </div>
